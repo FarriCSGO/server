@@ -1,4 +1,4 @@
-import express, { Application, Request, Response, NextFunction } from 'express'; 
+import express, { Application } from 'express'; 
 
 import { requestLogger } from './middleware/request.logger';
 import routes from './routes'
@@ -8,7 +8,8 @@ const app: Application = express();
 
 // Middlewares 
 // Parse incoming requests
-app.use(express.json);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Log every request to the console that was sent to the server
 app.use(requestLogger);
