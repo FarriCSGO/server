@@ -2,6 +2,14 @@
 
 **This is the back-end for the** `farri_webapp`
 
+#### **NOTE: Read `.env.sample` CAREFULL!!** 
+
+
+### Install the dependencies for the project
+```bash
+npm install 
+```
+
 ### To run server in Development
 ```bash
 npm run dev
