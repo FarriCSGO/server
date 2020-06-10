@@ -2,7 +2,7 @@
 
 **This is the back-end for the** `farri_webapp`
 
-#### **NOTE: Read `.env.sample` CAREFULL!!** 
+#### **NOTE: Read `.env.sample` CAREFULLY!!** 
 
 
 ### Install the dependencies for the project
