@@ -1,6 +1,6 @@
 import express, { Application } from 'express'; 
 
-import { requestLogger } from './middleware/request.logger';
+import { requestLogger } from './middleware/requestLogger';
 import routes from './routes'
 
 // Initialize ExpressJS `app`
