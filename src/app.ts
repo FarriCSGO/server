@@ -1,12 +1,12 @@
-import express, { Application } from 'express'; 
+import express, { Application } from "express";
 
-import { requestLogger } from './middleware/requestLogger';
-import routes from './routes'
+import requestLogger from "./middleware/requestLogger";
+import routes from "./routes";
 
 // Initialize ExpressJS `app`
 const app: Application = express();
 
-// Middlewares 
+// Middlewares
 // Parse incoming requests
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
