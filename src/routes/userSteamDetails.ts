@@ -4,6 +4,7 @@ import { USER_STEAM_DETAILS } from "../entities";
 
 const router: IRouter = express.Router();
 
+router.get("/id/:steam_id_64", controller.getDataByID);
 router.get("/:steam_id_64", (req: Request, res: Response) => {
     // TODO: ean up the steamLevel() function by creating a controller instead
     async function steamLevel() {
@@ -15,7 +16,7 @@ router.get("/:steam_id_64", (req: Request, res: Response) => {
             name: "Error: data missing",
             current_status: "Error: data missing",
             steam_level: "Error: data missing",
-            avatar_image_url: "Error: data missing",
+            avatar_image_url: "Error: data missing"
         };
 
         try {

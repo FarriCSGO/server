@@ -2,9 +2,9 @@ import { Response, Request, NextFunction } from "express";
 
 class userSteamDetailsController {
     static async getDataByID(req: Request, res: Response, next: NextFunction) {
-    /* Declare an object `userSteamDetails` of type `USER_STEAM_DETAILS`
-    * which will be returned as JSON data back to the client.
-    * steam_level - user's steam profile level */
+          /* Declare an object `userSteamDetails` of type `USER_STEAM_DETAILS`
+         * which will be returned as JSON data back to the client.
+         * steam_level - user's steam profile level */
         const userSteamDetails: USER_STEAM_DETAILS = {
             communityi_visibility_state: "Error: data missing",
             name: "Error: data missing",
