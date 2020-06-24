@@ -1,18 +1,14 @@
 # /api/userSteamDetails
 
-<img src="./images/sidebar_profile_card.png">
-
-### There are two ways to get the user's steam details.
-
-#### 1. /api/userSteamDetails/id/{profile_custom_url}
+### `1. /api/userSteamDetails/id/{profile_custom_url}`
 
 We know Steam Community profile link with custom URL looks like `https://steamcommunity.com/id/stonecoldman` and in this end point `profile_custom_url` = `stonecoldman` from our previous mentioned URL example.
 
-#### 2. /api/userSteamDetails/profiles/{steam_id_64}
+### `2. /api/userSteamDetails/profiles/{steam_id_64}`
 
 We know Steam Community profile link without custom URL looks like `https://steamcommunity.com/profiles/76561198893083379` and in this end point `steam_id_64` = `76561198893083379` from our previous mentioned URL example.
 
-### Response
+### Example Response
 
 ```json
 {
@@ -25,3 +21,7 @@ We know Steam Community profile link without custom URL looks like `https://stea
     }
 }
 ```
+
+### Example use on the client
+
+<img src="./images/sidebar_profile_card.png">
