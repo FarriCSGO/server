@@ -1,21 +1,31 @@
-import express, { Application } from "express";
+import express, { Application } from 'express';
+import morgan from 'morgan';
+import fs from 'fs';
+import path from 'path';
 
-import requestLogger from "./middleware/requestLogger";
-import routes from "./routes";
-import errorHandler from "./middleware/errorHandler";
+import routes from './routes';
+import errorHandler from './middleware/errorHandler';
 
 // Initialize ExpressJS `app`
 const app: Application = express();
 
-// Middlewares
 // Parse incoming requests
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Log every request to the console that was sent to the server
-app.use(requestLogger);
+app.use(morgan('dev'));
 
-// Route the request appropriately based on the end-point
+// log all requests to ../access.log
+app.use(
+  morgan('common', {
+    stream: fs.createWriteStream(path.join(__dirname, '../', 'access.log'), {
+      flags: 'a'
+    })
+  })
+);
+
+// Route the request correctly based on the end-point
 app.use(routes);
 
 // Handle errors
