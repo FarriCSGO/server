@@ -1,6 +1,10 @@
 import { Request, Response, NextFunction } from "express";
 
-const reqLogger = (req: Request, res: Response, next: NextFunction): any => {
+const requestLogger = (
+    req: Request,
+    res: Response,
+    next: NextFunction
+): any => {
     // Time at which the request reach the server
     const startTime = new Date().getTime();
 
@@ -18,4 +22,4 @@ const reqLogger = (req: Request, res: Response, next: NextFunction): any => {
     next();
 };
 
-export default reqLogger;
+export default requestLogger;

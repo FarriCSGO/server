@@ -1,7 +1,10 @@
 export default interface USER_STEAM_DETAILS {
-    communityi_visibility_state: number | string;
+    steam_id_64: string;
+    community_visibility_state: number | string;
     name: string;
-    current_status: string;
     steam_level: number | string;
     avatar_image_url: string;
+    last_log_off: number | string;
+    online_status: number | string;
+    playing_game?: string;
 }

@@ -2,6 +2,7 @@ import express, { Application } from "express";
 
 import requestLogger from "./middleware/requestLogger";
 import routes from "./routes";
+import errorHandler from "./middleware/errorHandler";
 
 // Initialize ExpressJS `app`
 const app: Application = express();
@@ -16,5 +17,8 @@ app.use(requestLogger);
 
 // Route the request appropriately based on the end-point
 app.use(routes);
+
+// Handle errors
+app.use(errorHandler);
 
 export { app };
