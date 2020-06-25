@@ -1,10 +1,12 @@
-import express from 'express';
+import express from "express";
 
 // Import route handlers
-import homeRouter from './home.route';
+import rootRouter from "./root";
+import userSteamDetailsRouter from "./userSteamDetails";
 
 const router = express.Router();
 
-router.use('/', homeRouter);   
+router.use("/api", rootRouter);
+router.use("/api/userSteamDetails/", userSteamDetailsRouter);
 
 export default router;
