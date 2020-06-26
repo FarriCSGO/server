@@ -5,12 +5,12 @@ const requestLogger = (
   res: Response,
   next: NextFunction
 ): any => {
-  // Time at which the request reach the server
+  // startTime - time at which the request reach the server
   const startTime = new Date().getTime();
 
-  // Log details to console when the response is sent from the server
+  // Log details to console when the response is sent from the server to client
   res.on('finish', () => {
-    // How long it took for the server to process the request
+    //endTime - time it took for the server to process the request
     const endTime = new Date().getTime() - startTime;
 
     // Print request details to the console

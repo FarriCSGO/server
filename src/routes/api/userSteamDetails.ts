@@ -1,5 +1,5 @@
 import express, { IRouter } from 'express';
-import controller from '../controllers/userSteamDetails';
+import controller from '../../controllers/userSteamDetails';
 
 const router: IRouter = express.Router();
 
