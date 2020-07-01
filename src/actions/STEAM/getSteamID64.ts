@@ -23,7 +23,7 @@ async function getSteamID64(profile_custom_url: string): Promise<any> {
     const data = response.data.response.steamid;
     return data;
   } catch (error) {
-    console.error(error);
+    throw new Error('Invalid profile_custom_url ' + profile_custom_url);
   }
 }
 
