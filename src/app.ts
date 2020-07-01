@@ -1,13 +1,12 @@
-import express, { Application } from "express";
+import express, { Application } from 'express';
 
-import requestLogger from "./middleware/requestLogger";
-import routes from "./routes";
-import errorHandler from "./middleware/errorHandler";
+import requestLogger from './middleware/requestLogger';
+import routes from './routes';
+import errorHandler from './middleware/errorHandler';
 
 // Initialize ExpressJS `app`
 const app: Application = express();
 
-// Middlewares
 // Parse incoming requests
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -15,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 // Log every request to the console that was sent to the server
 app.use(requestLogger);
 
-// Route the request appropriately based on the end-point
+// Route the request correctly based on the end-point
 app.use(routes);
 
 // Handle errors
