@@ -27,5 +27,5 @@ npm run build
 #### To run server in Production after deploy
 
 ```bash
-npm start
+npm start 
 ```
