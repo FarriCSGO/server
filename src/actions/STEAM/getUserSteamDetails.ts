@@ -1,7 +1,7 @@
 import * as dotenv from 'dotenv';
 import axios from 'axios';
 
-import { USER_STEAM_DETAILS } from '../../entities';
+import { IUserSteamDetails } from '../../interfaces';
 
 // Get access .env file
 dotenv.config();
@@ -10,7 +10,7 @@ async function getUserSteamDetails(steam_id: string): Promise<any> {
   /* Declare an object `userSteamDetails` of type `USER_STEAM_DETAILS`
    * which will be returned as JSON data back to the client.
    * steam_level - user's steam profile level */
-  const userSteamDetails: USER_STEAM_DETAILS = {
+  const userSteamDetails: IUserSteamDetails = {
     name: 'Error: data missing',
     steam_level: 'Error: data missing',
     avatar_image_url: 'Error: data missing',

@@ -1,9 +1,9 @@
 import getUserSteamDetails from '../../src/actions/STEAM/getUserSteamDetails';
-import { USER_STEAM_DETAILS } from '../../src/entities';
+import { IUserSteamDetails } from '../../src/interfaces';
 
 // Steam details of my really old account that I haven't used in years. This
 // makes it perfect to use this data for this test.
-const steamUser: USER_STEAM_DETAILS = {
+const steamUser: IUserSteamDetails = {
   name: 'I am retarded',
   steam_level: 54,
   avatar_image_url:

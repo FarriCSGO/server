@@ -1,4 +1,4 @@
-export default interface USER_STEAM_DETAILS {
+export default interface IUserSteamDetails {
   name: string;
   steam_level: number | string;
   avatar_image_url: string;

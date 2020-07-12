@@ -1,7 +1,7 @@
 import { Response, Request, NextFunction } from 'express';
 
 import * as actions from '../actions/';
-import { USER_STEAM_DETAILS } from '../entities';
+import { IUserSteamDetails } from '../interfaces';
 
 class userSteamDetailsController {
   static async getDataBySteamID64(
@@ -11,7 +11,7 @@ class userSteamDetailsController {
   ): Promise<any> {
     /* Declare an object `userSteamDetails` of type `USER_STEAM_DETAILS`
      * which will be returned as JSON data back to the client */
-    let userSteamDetails: USER_STEAM_DETAILS = {
+    let userSteamDetails: IUserSteamDetails = {
       name: 'Error: data missing',
       steam_level: 'Error: data missing',
       avatar_image_url: 'Error: data missing',
@@ -48,7 +48,7 @@ class userSteamDetailsController {
     /* Declare an object `userSteamDetails` of type `USER_STEAM_DETAILS`
      * which will be returned as JSON data back to the client.
      */
-    let userSteamDetails: USER_STEAM_DETAILS = {
+    let userSteamDetails: IUserSteamDetails = {
       name: 'Error: data missing',
       steam_level: 'Error: data missing',
       avatar_image_url: 'Error: data missing',
