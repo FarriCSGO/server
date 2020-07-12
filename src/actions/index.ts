@@ -1,2 +1,2 @@
 import * as steamActions from './STEAM';
-export const STEAM = steamActions;
+export const steam = steamActions;

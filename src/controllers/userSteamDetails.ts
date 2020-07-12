@@ -1,93 +1,82 @@
-import { Response, Request, NextFunction } from 'express';
+import { Response, Request, NextFunction } from "express";
 
-import * as actions from '../actions/';
-import { IUserSteamDetails } from '../interfaces';
+import * as actions from "../actions/";
+import { IUserSteamDetails } from "../interfaces";
 
 class userSteamDetailsController {
-  static async getDataBySteamID64(
+  static getDataBySteamID64 = async (
     req: Request,
     res: Response,
     next: NextFunction
-  ): Promise<any> {
-    /* Declare an object `userSteamDetails` of type `USER_STEAM_DETAILS`
-     * which will be returned as JSON data back to the client */
+  ): Promise<any> => {
     let userSteamDetails: IUserSteamDetails = {
-      name: 'Error: data missing',
-      steam_level: 'Error: data missing',
-      avatar_image_url: 'Error: data missing',
-      online_status: 'Error: data missing',
-      playing_game: undefined
+      name: "Error: data missing",
+      steamID64: "Error: data missing",
+      steamLevel: "Error: data missing",
+      avatarImageURL: "Error: data missing",
+      onlineStatus: "Error: data missing",
+      playingGame: undefined
     };
 
-    try {
-      // Fetch and set user's steam profile details
-      userSteamDetails = await actions.STEAM.getUserSteamDetails(
-        req.params.steam_id_64
-      );
+    const steamID64 = req.params.steamID64;
 
-      // Throw an error if user does not exist in the steam's data base
+    try {
+      userSteamDetails = await actions.steam.getUserSteamDetails(steamID64);
+
       if (!userSteamDetails) {
         throw Error;
       }
 
-      // Send client the JSON data
       res.json(userSteamDetails);
     } catch (error) {
       return next({
         code: 404,
-        message: 'User does not exist according to STEAM WEB API'
+        message: "User does not exist according to STEAM WEB API"
       });
     }
-  }
+  };
 
-  static async getDataByProfileCustomURL(
+  static getDataByProfileCustomURL = async (
     req: Request,
     res: Response,
     next: NextFunction
-  ): Promise<any> {
-    /* Declare an object `userSteamDetails` of type `USER_STEAM_DETAILS`
-     * which will be returned as JSON data back to the client.
-     */
+  ): Promise<any> => {
     let userSteamDetails: IUserSteamDetails = {
-      name: 'Error: data missing',
-      steam_level: 'Error: data missing',
-      avatar_image_url: 'Error: data missing',
-      online_status: 'Error: data missing',
-      playing_game: undefined
+      name: "Error: data missing",
+      steamID64: "Error: data missing",
+      steamLevel: "Error: data missing",
+      avatarImageURL: "Error: data missing",
+      onlineStatus: "Error: data missing",
+      playingGame: undefined
     };
 
-    let steam_id_64 = '';
+    let steamID64: string;
+    const profileCustomURL = req.params.profileCustomURL;
 
-    // Fetch user's steam_id_64 to get user's steam profile details
     try {
-      steam_id_64 = await actions.STEAM.getSteamID64(
-        req.params.profile_custom_url
-      );
+      steamID64 = await actions.steam.getSteamID64(profileCustomURL);
     } catch (err) {
       return next({
         code: 404,
-        message: 'User does not exist according to STEAM WEB API'
+        message: "User does not exist according to STEAM WEB API"
       });
     }
 
     try {
-      // Fetch and set user's steam profile details
-      userSteamDetails = await actions.STEAM.getUserSteamDetails(steam_id_64);
+      userSteamDetails = await actions.steam.getUserSteamDetails(steamID64);
 
-      // Throw an error if user does not exist in the steam's data base
       if (!userSteamDetails) {
         throw Error;
       }
 
-      // Send client the JSON data
       res.json(userSteamDetails);
     } catch (error) {
       return next({
         code: 404,
-        message: 'User does not exist according to STEAM WEB API'
+        message: "User does not exist according to STEAM WEB API"
       });
     }
-  }
+  };
 }
 
 export default userSteamDetailsController;
