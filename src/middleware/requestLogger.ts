@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response, NextFunction } from "express";
 
 const requestLogger = (
   req: Request,
@@ -9,7 +9,7 @@ const requestLogger = (
   const startTime = new Date().getTime();
 
   // Log details to console when the response is sent from the server to client
-  res.on('finish', () => {
+  res.on("finish", () => {
     //endTime - time it took for the server to process the request
     const endTime = new Date().getTime() - startTime;
 

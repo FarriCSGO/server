@@ -1,8 +1,8 @@
-import express, { Application } from 'express';
+import express, { Application } from "express";
 
-import requestLogger from './middleware/requestLogger';
-import routes from './routes';
-import errorHandler from './middleware/errorHandler';
+import requestLogger from "./middleware/requestLogger";
+import routes from "./routes";
+import errorHandler from "./middleware/errorHandler";
 
 // Initialize ExpressJS `app`
 const app: Application = express();
