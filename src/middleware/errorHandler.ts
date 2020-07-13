@@ -1,14 +1,8 @@
 import { Request, Response, NextFunction } from "express";
-
-interface Error {
-  code: number;
-  message: string;
-  // eslint-disable-next-line @typescript-eslint/ban-types
-  extraInfo?: {};
-}
+import { IError } from "../interfaces";
 
 const errorHandler = (
-  error: Error,
+  error: IError,
   req: Request,
   res: Response,
   next: NextFunction
