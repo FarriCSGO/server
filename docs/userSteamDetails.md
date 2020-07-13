@@ -13,10 +13,11 @@ We know Steam Community profile link without custom URL looks like `https://stea
 ```json
 {
   "name": "Papa Stalin",
-  "steam_level": 51,
-  "avatar_image_url": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/63/630df3a759d8a2e56d1141138fac4ce20f26f347_full.jpg",
-  "online_status": 1,
-  "playing_game": "Counter-Strike: Global Offensive"
+  "steamID64": "76561198893083379",
+  "steamLevel": 51,
+  "avatarImageURL": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/63/630df3a759d8a2e56d1141138fac4ce20f26f347_full.jpg",
+  "onlineStatus": 1,
+  "playingGame": "Counter-Strike: Global Offensive"
 }
 ```
 
@@ -25,6 +26,10 @@ We know Steam Community profile link without custom URL looks like `https://stea
 **name**
 
 - Steam profile name
+
+**steamID64**
+
+- SteamID64 of the profile
 
 **steam_level**
 

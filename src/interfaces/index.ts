@@ -1,1 +1,1 @@
-export { default as IUserSteamDetails } from './IUserSteamDetails';
+export { default as IUserSteamDetails } from "./IUserSteamDetails";

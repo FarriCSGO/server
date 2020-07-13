@@ -1,7 +1,8 @@
 export default interface IUserSteamDetails {
   name: string;
-  steam_level: number | string;
-  avatar_image_url: string;
-  online_status: number | string;
-  playing_game: string | undefined;
+  steamID64: string;
+  steamLevel: number | string;
+  avatarImageURL: string;
+  onlineStatus: number | string;
+  playingGame: string | undefined;
 }

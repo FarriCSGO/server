@@ -1,2 +1,2 @@
-export { default as getUserSteamDetails } from './getUserSteamDetails';
-export { default as getSteamID64 } from './getSteamID64';
+export { default as getUserSteamDetails } from "./getUserSteamDetails";
+export { default as getSteamID64 } from "./getSteamID64";
