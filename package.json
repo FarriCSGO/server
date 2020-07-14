@@ -4,7 +4,7 @@
   "description": "Backend for Farri",
   "main": "dist/server.js",
   "scripts": {
-    "start": "node ./dist/src/server.js",
+    "start": "node ./dist/server.js",
     "dev": "nodemon ./src/server.ts",
     "prebuild": "rm -rf dist",
     "build": "tsc -p .",
