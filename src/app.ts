@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 // Log every request to the console that was sent to the server
 app.use(requestLogger);
 
-// Enabling CORS to allow client(deployed) to make API request
+// Enabling CORS to allow client to make API request
 let ORIGIN: string;
 
 process.env.NODE_ENV === "production"
