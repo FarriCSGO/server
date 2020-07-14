@@ -4,8 +4,9 @@
   "description": "Backend for Farri",
   "main": "dist/server.js",
   "scripts": {
-    "start": "node ./dist/server.js",
+    "start": "node ./dist/src/server.js",
     "dev": "nodemon ./src/server.ts",
+    "prebuild": "rm -rf dist",
     "build": "tsc -p .",
     "format": "prettier --config .prettierrc 'src/**/*.ts'  --write",
     "lint": "eslint  --ext .ts . ",
@@ -20,7 +21,10 @@
       "pre-push": "npm run test:all"
     }
   },
-  "keywords": ["CSGO", "farri"],
+  "keywords": [
+    "CSGO",
+    "farri"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
