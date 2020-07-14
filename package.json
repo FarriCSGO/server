@@ -11,7 +11,8 @@
     "lint": "eslint  --ext .ts . ",
     "lint:fix": "eslint  --fix --ext .ts . ",
     "test": "jest",
-    "test:all": "jest --verbose"
+    "test:all": "jest --verbose",
+    "test:watch": "jest --watch"
   },
   "husky": {
     "hooks": {
@@ -19,10 +20,7 @@
       "pre-push": "npm run test:all"
     }
   },
-  "keywords": [
-    "CSGO",
-    "farri"
-  ],
+  "keywords": ["CSGO", "farri"],
   "author": "",
   "license": "ISC",
   "dependencies": {
