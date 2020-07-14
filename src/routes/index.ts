@@ -1,12 +1,12 @@
 import express from "express";
 
-// Import route handlers
+// Route handlers
 import userSteamDetailsRouter from "./api/userSteamDetails";
-import homeRoute from "./homeRoute";
+import quotesByProsRouter from "./api/quotesByPros";
 
 const router = express.Router();
 
 router.use("/api/userSteamDetails/", userSteamDetailsRouter);
-router.use("/", homeRoute);
+router.use("/api/quotesByPros", quotesByProsRouter);
 
 export default router;
