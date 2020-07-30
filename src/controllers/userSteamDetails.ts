@@ -1,7 +1,7 @@
 import { Response, Request, NextFunction } from "express";
 
 import * as actions from "../actions/";
-import { IUserSteamDetails } from "../interfaces";
+import IUserSteamDetails from "../interfaces/IUserSteamDetails";
 
 class userSteamDetailsController {
   static getDataBySteamID64 = async (

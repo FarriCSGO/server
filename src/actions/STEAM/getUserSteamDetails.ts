@@ -1,7 +1,7 @@
 import * as dotenv from "dotenv";
 import axios from "axios";
 
-import { IUserSteamDetails } from "../../interfaces";
+import IUserSteamDetails from "../../interfaces/IUserSteamDetails";
 
 dotenv.config();
 
