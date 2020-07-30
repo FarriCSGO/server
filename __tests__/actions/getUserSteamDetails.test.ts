@@ -1,5 +1,5 @@
 import getUserSteamDetails from "../../src/actions/STEAM/getUserSteamDetails";
-import { IUserSteamDetails } from "../../src/interfaces";
+import IUserSteamDetails from "../../src/interfaces/IUserSteamDetails";
 
 // Steam details of my really old account that I haven't used in years. This
 // makes it perfect to use this data for this test.
