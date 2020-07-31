@@ -10,7 +10,7 @@ class steamID64Controller {
     next: NextFunction
   ): Promise<any> => {
     const steamID64: ISteamID64 = {
-      steamID64: ""
+      steamID64: null
     };
 
     const customID = req.params.customID;

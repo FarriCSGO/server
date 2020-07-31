@@ -1,6 +1,6 @@
 import { Response, Request, NextFunction } from "express";
 
-import * as actions from "../actions/";
+import * as actions from "../actions";
 import IUserSteamDetails from "../interfaces/IUserSteamDetails";
 
 class userSteamDetailsController {
@@ -10,12 +10,12 @@ class userSteamDetailsController {
     next: NextFunction
   ): Promise<any> => {
     let userSteamDetails: IUserSteamDetails = {
-      name: "Error: data missing",
-      steamID64: "Error: data missing",
-      steamLevel: "Error: data missing",
-      avatarImageURL: "Error: data missing",
-      onlineStatus: "Error: data missing",
-      playingGame: undefined
+      name: null,
+      steamID64: null,
+      steamLevel: null,
+      avatarImageURL: null,
+      onlineStatus: null,
+      playingGame: null
     };
 
     const steamID64 = req.params.steamID64;
@@ -42,12 +42,12 @@ class userSteamDetailsController {
     next: NextFunction
   ): Promise<any> => {
     let userSteamDetails: IUserSteamDetails = {
-      name: "Error: data missing",
-      steamID64: "Error: data missing",
-      steamLevel: "Error: data missing",
-      avatarImageURL: "Error: data missing",
-      onlineStatus: "Error: data missing",
-      playingGame: undefined
+      name: null,
+      steamID64: null,
+      steamLevel: null,
+      avatarImageURL: null,
+      onlineStatus: null,
+      playingGame: null
     };
 
     let steamID64: string;

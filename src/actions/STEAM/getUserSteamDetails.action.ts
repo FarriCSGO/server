@@ -7,12 +7,12 @@ dotenv.config();
 
 const getUserSteamDetails = async (steamID64: string): Promise<any> => {
   const userSteamDetails: IUserSteamDetails = {
-    name: "Error: data missing",
-    steamID64: "Error: data missing",
-    steamLevel: "Error: data missing",
-    avatarImageURL: "Error: data missing",
-    onlineStatus: "Error: data missing",
-    playingGame: undefined
+    name: null,
+    steamID64: null,
+    steamLevel: null,
+    avatarImageURL: null,
+    onlineStatus: null,
+    playingGame: null
   };
 
   const API_KEY = process.env.STEAM_API_KEY;

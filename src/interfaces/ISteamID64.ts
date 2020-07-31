@@ -1,3 +1,3 @@
 export default interface ISteamID64 {
-  steamID64: string | undefined;
+  steamID64: string | null;
 }
