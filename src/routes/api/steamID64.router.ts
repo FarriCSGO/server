@@ -1,6 +1,6 @@
 import express, { IRouter } from "express";
 
-import controller from "../../controllers/steamID64";
+import controller from "../../controllers/steamID64.controller";
 
 const router: IRouter = express.Router();
 

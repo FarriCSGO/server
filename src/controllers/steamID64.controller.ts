@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 
 import * as actions from "../actions";
-import { ISteamID64 } from "../interfaces";
+import ISteamID64 from "../interfaces/ISteamID64";
 
 class steamID64Controller {
   static getSteamID64 = async (
@@ -10,7 +10,7 @@ class steamID64Controller {
     next: NextFunction
   ): Promise<any> => {
     const steamID64: ISteamID64 = {
-      steamID64: ""
+      steamID64: null
     };
 
     const customID = req.params.customID;

@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { IError } from "../interfaces";
+import IError from "../interfaces/IError";
 
 const errorHandler = (
   error: IError,
