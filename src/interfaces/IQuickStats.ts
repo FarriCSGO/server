@@ -4,3 +4,13 @@ export default interface QuickStats {
   adr: number | null;
   hsRate: number | null;
 }
+
+export interface IValues {
+  matchesWon: number;
+  matchesPlayed: number;
+  kills: number;
+  deaths: number;
+  damage: number;
+  rounds: number;
+  headshots: number;
+}
