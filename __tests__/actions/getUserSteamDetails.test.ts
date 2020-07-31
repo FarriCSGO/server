@@ -1,4 +1,4 @@
-import getUserSteamDetails from "../../src/actions/STEAM/getUserSteamDetails";
+import getUserSteamDetails from "../../src/actions/STEAM/getUserSteamDetails.action";
 import IUserSteamDetails from "../../src/interfaces/IUserSteamDetails";
 
 // Steam details of my really old account that I haven't used in years. This
@@ -10,7 +10,7 @@ const steamUser: IUserSteamDetails = {
   avatarImageURL:
     "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/49/4903f580b21e385a35b1f4b61ce5771ab9ec0bb5_full.jpg",
   onlineStatus: 0,
-  playingGame: undefined
+  playingGame: null
 };
 
 // This test will fail if STEAM decides to change the URL of the avatar, rest
