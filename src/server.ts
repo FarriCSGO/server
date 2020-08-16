@@ -1,7 +1,7 @@
 import { app } from "./app";
 import * as dotenv from "dotenv";
-import Steam = require("steam");
-import csgo = require("csgo");
+import Steam from "steam";
+import csgo from "csgo";
 
 dotenv.config();
 
