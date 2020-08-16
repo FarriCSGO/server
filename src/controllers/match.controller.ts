@@ -13,15 +13,19 @@ const getMatchData = async (
   res: Response,
   next: NextFunction
 ): Promise<any> => {
-  const shareCodeParam = req.params.shareCode;
+  const shareCodeParam = req.body.shareCode;
+  const steamID = req.body.steamID;
 
   const shareCode = new csgo.SharecodeDecoder(shareCodeParam);
+  const accountID = csgoClient.ToAccountID(steamID);
   const decodedShareCode: IDecodedShareCode = shareCode.decode();
-  console.log("DECODE:", decodedShareCode);
 
   const matchID = decodedShareCode.matchId;
   const outcomeID = decodedShareCode.outcomeId;
   const tokenID = parseInt(decodedShareCode.tokenId);
+
+  console.log("ACCOUNT:", accountID);
+  console.log("MATCH:", decodedShareCode);
 
   // Launch CSGO Client to start talking with CSGO GameCoordinator
   csgoClient.launch();

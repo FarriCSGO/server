@@ -4,6 +4,6 @@ import controller from "../../controllers/match.controller";
 
 const router: IRouter = express.Router();
 
-router.get("/:shareCode", controller.getMatchData);
+router.post("/", controller.getMatchData);
 
 export default router;
